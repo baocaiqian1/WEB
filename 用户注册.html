@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户注册</title>
+	<meta charset="utf-8">
+	<script src="jQ/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var username=$('input[name="username"]');
+			var pswd=$('input[name="password"]');
+			var rpswd=$('input[name="repassword"]');
+			var NY=true;
+			username.blur(function(){
+				var name=username.val();
+				if (name=="") {
+					$("#1").append("<span>用户名不能为空</span>");
+					NY=false;
+				}
+			});
+			username.focus(function(){
+				if(!NY)
+				{
+					$('#1 span').remove();
+				}
+				NY=true;
+			});
+			pswd.blur(function(){
+				var pass=pswd.val();
+				if (pass=="") {
+					$("#2").append("<span>密码不能为空</span>");
+					NY=false;
+				}
+			});
+			pswd.focus(function(){
+				if(!NY)
+				{
+					$('#2 span').remove();
+				}
+			});
+			$('#btn').click(function(){
+				var pasd=pswd.val();
+				var repasd=rpswd.val();
+				if(pasd!=repasd)
+				{
+					$("#3").append("<span>与原密码不一致</span>");
+					NY=false;
+				}
+				else{
+					alert('注册成功！');
+				}
+			});
+			rpswd.focus(function(){
+				if(!NY)
+				{
+					$('#3 span').remove();
+				}
+			});
+		});
+		</script>
+	<style type="text/css">
+		#btn{
+			text-align: center;
+		}
+		tr{
+			text-align: right;
+		}
+		h1{
+			text-align: center;
+		}
+		div{
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+<div>
+<h1>用户注册</h1>
+<form action="" method="get">
+	<table>
+		<tr id="1">
+			<td>用户名：</td>
+			<td>
+				<input type="text" name="username" id="username" />
+			</td>
+		</tr>
+		<tr id="2">
+			<td>密码：</td>
+			<td>
+				<input type="password" name="password" id="password" />
+			</td>
+		</tr>
+		<tr id="3">
+			<td>确认密码：</td>
+			<td>
+				<input type="password" name="repassword" id="repassword" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" id="btn">
+				<input type="button" name="setin" value="注册">
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+</body>
+</html>
