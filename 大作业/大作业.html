@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>鲍氏家族</title>
+	<meta charset="utf-8">
+	<script src="jQ/jquery-3.2.1.min.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="js/autochange.js"></script>
+	<script>
+         $(document).ready(function(){
+         var lis=$("#navb ul>li");
+         lis.hover(function(){
+         $(this).find("ul").show();
+         },function(){
+          $(this).find("ul").hide();
+        });
+          var lis1=$(".sanjiao1");
+         lis1.click(function(){
+         	$(".menu1").slideDown(2000);
+         });
+         lis1.dblclick(function(){
+         $(".menu1").slideUp(2000);
+         });
+         var lis2=$(".sanjiao2");
+         lis2.click(function(){
+         	$(".menu2").slideDown(1000);
+         });
+         lis2.dblclick(function(){
+         $(".menu2").slideUp(1000);
+         });
+         var lis3=$(".sanjiao3");
+         lis3.click(function(){
+         	$(".menu3").slideDown(3000);
+         });
+         lis3.dblclick(function(){
+         $(".menu3").slideUp(3000);
+         });
+        })
+</script>
+	<style type="text/css">
+	  *{
+		margin:0;
+		padding: 0px;
+		}
+		#nav{
+			height: 265px;
+			background-image: url("images/navpag.png");
+			width: 100%;
+		}
+		#navb ul{
+            list-style-type:none;
+            position: relative;
+           /* margin-right: 15px;*/
+        }
+        #navb ul li{
+            float:left;
+            width:12.5%;
+            background:#cccccc;
+            height:45px;
+            line-height:45px;
+            text-align:center;
+        }
+        #navb ul li:hover
+        {
+            background-color: #cccc00;
+        }
+        #navb ul li ul{
+            display:none;
+        }
+        #navb ul li ul li{
+            width:100%;
+        }
+        #navb a{
+            text-decoration:none;
+            color: #3c3c3c;
+        }
+        #left{
+        	width: 300px;
+        	/*height: 710px;*/
+        	border: 2px solid #e8e8e8;
+        }
+        #left{
+        	float: left;
+        }
+	#left ul{
+		list-style-type: none;
+	}
+	#left ul li{
+		/*float: left;*/
+		width: 300px;
+		background-color: #f6f6f6;
+		/*height: 45px;*/
+		line-height: 45px;
+		text-align: center;
+		border-bottom: 1px dotted #000;
+		/*position: relative;*/
+	}
+	#dleft{
+		/*float: left;*/
+		width: 300px;
+		background-color: #f6f6f6;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		border-bottom: 1px dotted #000;
+	}
+	#left li{
+		list-style-type: none;
+	}
+    .sanjiao{
+	    text-align: right;
+	}
+	#left ul li ul{
+		display: none;
+	}
+	#left ul li ul li{
+		width: 100%;
+		background-color: #e0e0e0;
+	}
+	#left ul li ul li:hover{
+		width: 100%;
+		background-color: #a6a600;
+	}
+	#left a{
+		text-decoration: none;
+		color: #000;
+	}
+	#left a:hover{
+		color: #977c00;
+	}
+	#right{
+		float: right;
+		width: 77%;
+	}
+	#divTip1{
+		  display:none;
+		  padding:10px;
+	     position:absolute;
+	      width: 600px;
+		  height: 280px;
+		  border: 2px ridge #bebebe;
+		  background-color: #33ffdd;
+		}
+		#t1{
+			width: 600px;
+			height: 35px;
+			background-color: #46A3ff;
+		}
+		#name{
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+<div>
+<!--导航栏部分-->
+<div id="daohanglan">
+<div id="nav"></div>
+<div id="navb">
+<ul class="menu">
+            <li><a href="#" id="1">首页</a></li>
+            <li>
+                <a href="#" id="2">要闻头条</a>
+                <ul class="xmenu">
+                    <li><a href="#">名人要会</a></li>
+                    <li><a href="#">《鲍家》拍摄
+                    </a></li>
+                    <li><a href="#">鲍氏谱牒研讨</a></li>
+                    <li><a href="#">名人伟绩</a></li>
+                    <li><a href="#">更多  >> </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="3">会务报告</a>
+                <ul class="xmenu">
+                    <li><a href="#">中华鲍氏族史研究总会</a></li>
+                    <li><a href="#">鲍氏谱牒研讨会</a></li>
+                    <li><a href="#">支部宗亲大会</a></li>
+                    <li><a href="#">族史座谈会</a></li>
+                    <li><a href="#">更多  >> </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="4">河间溯源</a>
+                <ul class="xmenu">
+                    <li><a href="#">大河间贵宾云集</a></li>
+                    <li><a href="#">束城鲍叔牙墓</a></li>
+                    <li><a href="#">束州丞鲍宣</a></li>
+                    <li><a href="#">诗祭叔牙墓</a></li>
+                    <li><a href="#">更多  >> </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="5">当代风流</a>
+                <ul class="xmenu">
+                    <li><a href="#">鲍家政治党人</a></li>
+                    <li><a href="#">鲍家学术名人</a></li>
+                    <li><a href="#">鲍家艺术家</a></li>
+                    <li><a href="#">鲍家诗人</a></li>
+                    <li><a href="#">更多  >> </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="5">谱牒研究</a>
+                <ul class="xmenu">
+                    <li><a href="#">宗族村规</a></li>
+                    <li><a href="#">慈孝文化</a></li>
+                    <li><a href="#">宗支普略</a></li>
+                    <li><a href="#">修谱及经费</a></li>
+                    <li><a href="#">更多  >> </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="6">寻根觅宗</a>
+                <ul class="xmenu">
+                    <li><a href="#">中华鲍氏字谱</a></li>
+                    <li><a href="#">鲍氏渊源</a></li>
+                    <li><a href="#">鲍氏先祖</a></li>
+                    <li><a href="#">普系考述</a></li>
+                    <li><a href="#">更多  >> </a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="7">枝繁叶茂</a>
+                <ul class="xmenu">
+                    <li><a href="#">平仓鲍氏</a></li>
+                    <li><a href="#">浮山鲍氏</a></li>
+                    <li><a href="#">桐城鲍氏</a></li>
+                    <li><a href="#">怀义堂鲍氏</a></li>
+                    <li><a href="#">更多  >> </a></li>
+                </ul>
+            </li>
+</ul>
+</div>
+<br>
+<br>
+</div>
+<!--网页主体部分-->
+<div id="left">
+		<ul>
+			<li class="dleft">
+				<a href="#">姓氏起源<img src="images/sanjiao.png" class="sanjiao1"></a>
+				<ul class="menu1">
+					<li><a href="#">夏禹裔孙敬叔之子</a></li>
+					<li><a href="#">源于风姓，远古第一帝伏羲氏 </a></li>
+					<li><a href="#">源于芈姓</a></li>
+					<li><a href="#">源于鲜卑族</a></li>
+					<li><a href="#">源于蒙古族，属于汉化改姓为氏</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li class="dleft">
+				<a href="#">鲍氏始祖<img src="images/sanjiao.png" class="sanjiao2"></a>
+				<ul class="menu2">
+					<li><a href="#">鲍叔牙</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="#">鲍氏迁徙</a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="#">鲍氏分布</a>
+			</li>
+		</ul>
+		<ul>
+			<li class="dleft">
+				<a href="#">鲍氏名人<img src="images/sanjiao.png" class="sanjiao3"></a>
+				<ul class="menu3">
+					<li><a href="#">鲍叔牙</a></li>
+					<li><a href="#">鲍敬言</a></li>
+					<li><a href="#">鲍宣</a></li>
+					<li><a href="#">鲍永</a></li>
+					<li><a href="#">鲍昱</a></li>
+					<li><a href="#">鲍恢</a></li>
+					<li><a href="#">鲍信</a></li>
+					<li><a href="#">鲍照</a></li>
+					<li><a href="#">更多》》</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="right">
+	<h1>
+		<img src="images/bao.png">
+		<img src="images/shi.png">
+		<img src="images/wen.png">
+		<img src="images/yuan.png">
+	</h1>
+	<div id="tfeng"><span id="more"><a href="#">更多>></a></span></div>
+	<div id="picScroll">
+		<span id="picScroll1">
+			<img src="images/1.jpg" />
+			<img src="images/2.jpg" />
+			<img src="images/3.jpg" />
+			<img src="images/4.jpg" />
+			<img src="images/5.jpg" />
+			<img src="images/6.jpg" />
+			<img src="images/7.jpg" />
+			<img src="images/8.jpg" />
+			<img src="images/9.jpg" />
+			<img src="images/11.jpg" />
+		</span>
+		<span id="picScroll2"></span>
+	</div>
+	<div id="wenhua">
+		<div id="twenhua"><span id="more"><a href="#">更多>></a></span></div>
+		<div id="baojia">
+			<img src="images/bj.jpg">
+			<p>7月19日上午，CCTV发现之旅频道系列文化纪录片《鲍家》在济南山东大厦中华厅举行开......<span id="more1"><a href="#">更多>></a></span></p>
+		</div>
+		<div id="list">
+			<div id="list1">
+				<ul>
+					<li><a href="#">鲍氏颂</a></li>
+					<li><a href="#">鲍氏五伦赞</a></li>
+					<li><a href="#">诗词三首</a></li>
+					<li><a href="#">联结</a></li>
+					<li><a href="#">继往开来</a></li>
+					<li><a href="#">处世</a></li>
+					<li><a href="#">颂家风</a></li>
+					<li><a href="#">谒鲍叔牙墓</a></li>
+				</ul>
+			</div>
+			<div id="list1">
+				<ul>
+					<li><a href="#">鲍照美文</a></li>
+					<li><a href="#">映日荷花别样红</a></li>
+					<li><a href="#">岁末谒管鲍词</a></li>
+					<li><a href="#">鲍照读书台碑记</a></li>
+					<li><a href="#">明代初年贵州屯堡文化</a></li>
+					<li><a href="#">鲍公琰与龙华书院</a></li>
+					<li><a href="#">鲍朝密诗集</a></li>
+					<li><a href="#">鲍景余画作</a></li>
+				</ul>
+			</div>
+			<div id="list1">
+				<ul>
+					<li><a href="#">官不择位鲍象贤</a></li>
+					<li><a href="#">鲍训相诗词三首</a></li>
+					<li><a href="#">鲍云龙诗二首</a></li>
+					<li><a href="#">中华鲍氏春秋</a></li>
+					<li><a href="#">鲍源深列传</a></li>
+					<li><a href="#">鲍友恪生平</a></li>
+					<li><a href="#">鲍公墓志铭</a></li>
+					<li><a href="#">《鲍家》</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--鲍家名人-->
+	<div id="mingren">
+	<div id="tren"><span id="more"><a href="#">更多>></a></span></div>
+	<div id="mr1">
+		<div class="name">
+		<span><a href="#">鲍叔牙</a></span>
+	    </div>
+		<div class="img">
+			<img src="images/baoshuya.jpg" id="pic">
+			<div id="divTip1">
+		  	<div id="t1">
+		    <span id="name">鲍叔牙</span>
+	        </div>
+	         <div id="jieshao">
+        		<p>鲍叔牙（公元前723年或公元前716年-前644年）姒姓，鲍氏，名叔牙。颍上（今属安徽）人。春秋时期齐国大夫。</p>
+		        <p>早年辅助公子小白（即后来的齐桓公），齐襄公十二年（公元前686年）协助公子小白夺得国君之位，并推荐管仲为相。齐桓公三十年（公元前656年），参与“召陵之盟”使诸国尊齐王霸主。齐桓公四十一年（公元前645年），鲍叔牙称相，并在不久后病逝。</p>
+		        <p>在鲍叔牙的协助下，在齐国顺利实行了他的治国之道。鲍叔牙为政重教化，使齐国迅速由乱转治，由弱变强，齐桓公也成了春秋时期的第一个霸主。</p>
+	         </div>
+		</div>
+		</div>
+	</div>
+	<div id="mr1">
+		<div class="name">
+		<a href="#"><span>鲍宣</span></a>
+	    </div>
+		<div class="img">
+			<img src="images/baoxuan.jpg">
+		</div>
+	</div>
+	<div id="mr1">
+		<div class="name">
+		<a href="#"><span>鲍先志</span></a>
+	    </div>
+		<div class="img">
+			<img src="images/baoxianzhi.jpg">
+		</div>
+	</div>
+	</div>
+</div>
+<div id="bottom">
+		<p>Copyright [17/6/10] by [baqcxks]</p>
+		<p>地址：河北师范学</p>
+		<p>版权所属，请勿侵权</p>
+	</div>
+</body>
+</html>
